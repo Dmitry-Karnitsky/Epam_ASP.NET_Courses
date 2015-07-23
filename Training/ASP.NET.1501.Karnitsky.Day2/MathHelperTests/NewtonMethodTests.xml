@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<TestCases>
+  <TestCase>
+    <InputNumber>35831808</InputNumber>
+    <SpecifiedPower>7</SpecifiedPower>
+    <ExpectedResult>12</ExpectedResult>
+  </TestCase>
+  <TestCase>
+    <InputNumber>-35831808</InputNumber>
+    <SpecifiedPower>7</SpecifiedPower>
+    <ExpectedResult>-12</ExpectedResult>
+  </TestCase>
+  <TestCase>
+    <InputNumber>-35831808</InputNumber>
+    <SpecifiedPower>4</SpecifiedPower>
+    <ExpectedResult>NaN</ExpectedResult>
+  </TestCase>
+  <TestCase>
+    <InputNumber>-35831808</InputNumber>
+    <SpecifiedPower>4</SpecifiedPower>
+    <ExpectedResult>NaN</ExpectedResult>
+  </TestCase>
+  <TestCase>
+    <InputNumber>987654</InputNumber>
+    <SpecifiedPower>7</SpecifiedPower>
+    <ExpectedResult>7.1840958515855</ExpectedResult>
+  </TestCase>
+  <TestCase>
+    <InputNumber>0</InputNumber>
+    <SpecifiedPower>2</SpecifiedPower>
+    <ExpectedResult>0</ExpectedResult>
+  </TestCase>
+  <TestCase>
+    <InputNumber>75664</InputNumber>
+    <SpecifiedPower>8</SpecifiedPower>
+    <ExpectedResult>4.07250064800157</ExpectedResult>
+  </TestCase>
+  <TestCase>
+    <InputNumber>75664</InputNumber>
+    <SpecifiedPower>1</SpecifiedPower>
+    <ExpectedResult>75664</ExpectedResult>
+  </TestCase>
+  <TestCaseExceptions>
+    <InputNumber>75664</InputNumber>
+    <SpecifiedPower>-2</SpecifiedPower>
+    <ExpectedResult>0</ExpectedResult>
+  </TestCaseExceptions>
+  <TestCaseExceptions>
+    <InputNumber>15</InputNumber>
+    <SpecifiedPower>0.5</SpecifiedPower>
+    <ExpectedResult>0</ExpectedResult>
+  </TestCaseExceptions>
+
+</TestCases>

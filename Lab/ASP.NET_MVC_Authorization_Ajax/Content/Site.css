@@ -1,0 +1,452 @@
+﻿body {
+    background-color: #ffffff;
+    color: #000000;
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    margin: 0 auto;
+    padding-top: 0.5em;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: #524680;
+}
+
+.page-layout {
+    width: 60em;
+    margin: 0 auto 2.5em auto;
+    min-height: 100%;
+    height: 100%;
+}
+
+header {
+    background-color: #758fd1;
+    /*border: thin solid #337ab7;*/
+    margin-bottom: 0.5em;
+    width: 100%;
+    height: 11.5em;
+    position: relative;
+}
+
+.header-image {
+    margin-left: 0.3em;
+    margin-top: 0.3em;
+    margin-right: 0.2em;
+    width: 12em;
+    font-size: 1em;
+    float: left;
+}
+
+.header-text {
+    color: #3b3352;
+    display: inline-block;
+    margin-top: 0.8em;
+    margin-left: 0.5em;
+    font-size: 1em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+    .header-text h1 {
+        margin: 0 0 0 0;
+    }
+
+    .header-text h3 {
+        margin: 0 0 0 0;
+    }
+
+.header-navigation {
+    position: absolute;
+    bottom: 0;
+    height: 3em;
+    width: 100%;
+    background-color: #50588f;
+    /*border: thin solid #337ab7;*/
+}
+
+.header-navigation-list {
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    height: inherit;
+    width: 100%;
+}
+
+    .header-navigation-list li {
+        float: left;
+        display: inline;
+        width: 10em;
+        height: inherit;
+    }
+
+    .header-navigation-list a:link, .header-navigation-list a:visited {
+        display: block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 700;
+        font-size: medium;
+        width: inherit;
+        line-height: 3em;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+        border-right: 1px solid #3b3352;
+    }
+
+    .header-navigation-list a:hover, .header-navigation-list a:active {
+        background-color: #c1d6eb;
+        color: #3b3352;
+    }
+
+header .authorized-user-menu-wrapper {
+    position: absolute;
+    right: 2em;
+    top: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    border: 1px solid #3b3352;
+    border-top: none;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    background-color: #50588f;
+    color: white;
+}
+
+.authorized-user-menu-wrapper a {
+    color: white;
+}
+
+
+header .unauthenticated-login-button {
+    position: absolute;
+    right: 2em;
+    top: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: medium;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.2em 0.5em 0.2em 0.5em;
+    border: 1px solid #3b3352;
+    border-top: none;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+    background-color: #50588f;
+    color: white;
+}
+
+    header .unauthenticated-login-button:link, header .unauthenticated-login-button:visited {
+        background-color: #50588f;
+        color: white;
+    }
+
+    header .unauthenticated-login-button:hover, header .unauthenticated-login-button:active {
+        background-color: #c1d6eb;
+        color: #3b3352;
+        cursor: pointer;
+    }
+
+.header-login-window {
+    background-color: #c1d6eb;
+    color: #3b3352;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: block;
+    position: absolute;
+    right: 2em;
+    top: 0em;
+    z-index: 1;
+    height: calc(9.5em - 2px);
+    width: 13em;
+    padding: 1em 0.5em 1em 0.5em;
+    border: 1px solid #3b3352;
+    border-radius: 0.3em;
+}
+
+    .header-login-window #close-login-window {
+        position: absolute;
+        right: 0.1em;
+        top: 0.1em;
+        line-height: 1em;
+        border: 1px solid #3b3352;
+        border-radius: 1em;
+        padding: 0 0.2em 0 0.2em;
+    }
+
+        .header-login-window #close-login-window:hover {
+            cursor: pointer;
+        }
+
+.username-label {
+    display: block;
+}
+
+.password-label {
+    display: block;
+}
+
+.rememberme-label {
+    display: inline;
+}
+
+#Username {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+#Password {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+#RepeatPassword {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+#Email {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+#FirstName {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+#LastName {
+    display: block;
+    margin-bottom: 0.5em;
+}
+
+#RememberMe {
+    display: inline;
+    margin: 0.2em 4em 0.2em 0.5em;
+}
+
+#login-button {
+    display: inline;
+    height: 2em;
+    width: 4em;
+    margin: 0.3em 0 0 0.3em;
+}
+
+    #login-button:hover {
+        cursor: pointer;
+    }
+
+#register-button {
+    display: block;
+    height: 2em;
+    width: 6em;
+    margin: 0.5em 0 0 0em;
+}
+
+    #register-button:hover {
+        cursor: pointer;
+    }
+
+.left-side-panel {
+    background-color: #758fd1;
+    width: 14em;
+    margin: 0 1em 0 0;
+    float: left;
+}
+
+.side-navigation {
+    margin: 0.5em auto;
+    width: 13em;
+    background-color: #50588f;
+}
+
+.side-navigation-list {
+    margin: 0;
+    padding: 0;
+    width: inherit;
+}
+
+    .side-navigation-list a:link, .side-navigation-list a:visited {
+        display: block;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        font-weight: 700;
+        font-size: medium;
+        width: inherit;
+        color: white;
+        line-height: 3em;
+        padding: 5px;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .side-navigation-list a:hover, .side-navigation-list a:active {
+        background-color: #c1d6eb;
+        color: #3b3352;
+    }
+
+.content {
+    background-color: #f2f2f5;
+    display: inline-block;
+    width: calc(60em - 14em - 1em - 2em); /* page-layout.width - lift-side-panel.width - margins between content and left-side-panel - content padding*/
+    padding: 1em;
+    color: #3b2631;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+    .content h2 {
+        margin: 0;
+    }
+
+.content-single-column-table {
+    border: 1px solid #808080;
+    padding: 0.5em;
+    margin: 0.5em 0 0.1em 0;
+}
+
+.single-column-table-item {
+    border: 2px solid #3b2631;
+    border-radius: 0.5em;
+    width: 100%;
+    margin: 0.3em 0 0.3em 0;
+}
+
+    .single-column-table-item .table-item-content {
+        padding: 0.3em;
+    }
+
+.pagination .page-links {
+    max-width: 15em;
+    margin: 0 auto 0 auto;
+    width: auto;
+}
+
+.page-links a:link, a:visited {
+    display: inline-block;
+    width: 1.5em;
+    line-height: 1.5em;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid #3b2631;
+    border-radius: 0.3em;
+    margin: 0.2em;
+}
+
+.pagination .page-links .clicked {
+    background-color: #758fd1;
+    color: white;
+}
+
+.content-comments {
+    display: block;
+    margin: 0.5em 0 0.1em 0;
+}
+
+    .content-comments form {
+        margin: 0.2em auto 0.2em auto;
+    }
+
+    .content-comments .comment-input {
+        margin: 0.2em auto 0.2em auto;
+        width: 90%;
+        max-width: 90%;
+        height: 5em;
+        display: block;
+        border: 1px solid #3b2631;
+        border-radius: 0.3em;
+        color: #3b2631;
+    }
+
+    .content-comments .button {
+        display: block;
+        margin: 0.5em 3em 0.2em auto;
+        border: 1px solid #3b2631;
+        border-radius: 0.3em;
+        background-color: #c1d6eb;
+        color: #3b3352;
+        line-height: 2em;
+    }
+
+        .content-comments .button:hover {
+            /*cursor: pointer;*/ /*this attribute is controlled by JS*/
+        }
+
+    .content-comments .comments-list {
+        padding: 0;
+        margin: 0.5em 2.5em 0.5em 2.5em;
+        border-top: 1px solid #808080;
+    }
+
+    .content-comments .comment {
+        border-bottom: 1px solid #808080;
+        padding: 0.5em 0 0.5em 0;
+    }
+
+.comment .comment-user {
+    display: inline;
+    font-size: larger;
+    font-stretch: expanded;
+}
+
+.comment .comment-time {
+    display: inline-block;
+    margin: 0em 3em 0 0.5em;
+    width: 8em;
+    font-size: small;
+    color: #808080;
+}
+
+.comment .comment-text {
+    display: block;
+    padding: 0 0.3em 0 0.3em;
+}
+
+.invisible {
+    display: none;
+}
+
+/*footer {
+    width:60em;
+	height:2.5em;
+    background-color: grey;
+    margin: -2.5em auto 0 auto;
+}
+
+footer p{
+    font-weight: 600;
+    color: white;
+}*/
+
+.login-page-menu {
+    margin: 3em auto;
+    height: 15em;
+    width: 15em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 3em 3em 3em;
+    background-color: #c1d6eb;
+    border: 1px solid #50588f;
+    border-radius: 1em;
+}
+
+    .login-page-menu .field-validation-error {
+        color: red;
+    }
+
+.register-page-menu {
+    margin: 3em auto;
+    height: 25em;
+    width: 15em;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 0 3em 3em 3em;
+    background-color: #c1d6eb;
+    border: 1px solid #50588f;
+    border-radius: 1em;
+}
+
+.login-page-menu .field-validation-error {
+    color: red;
+}

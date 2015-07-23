@@ -1,0 +1,34 @@
+﻿@model Task_2.ViewModels.LoginViewModel
+@{
+    ViewBag.Title = "LogIn";
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+
+}
+<div class="login-page-menu">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>User Login</h4>
+            <hr/>
+            @Html.ValidationSummary(true)
+
+            @Html.LabelFor(model => model.Username, new { @class = "username-label" })
+            @Html.EditorFor(model => model.Username, new { @class = "username-input" })
+            @Html.ValidationMessageFor(model => model.Username)
+
+            @Html.LabelFor(model => model.Password, new { @class = "password-label" })
+            @Html.EditorFor(model => model.Password, new { @class = "password-input" })
+            @Html.ValidationMessageFor(model => model.Password)
+
+            @Html.LabelFor(model => model.RememberMe, new { @class = "rememberme-label" })
+            @Html.EditorFor(model => model.RememberMe, new { @class = "rememberme-input" })
+            @Html.ValidationMessageFor(model => model.RememberMe)
+
+            <input type="submit" value="Login" id="login-button" />
+            <span style="display: inline;"> or </span>
+            @Html.ActionLink("Register", "Register", "Account", new { returnUrl = Request.QueryString["returnUrl"] ?? Request.Url.OriginalString}, new { style = "margin-top: 0.3em;" })
+        </div>
+    }
+</div>

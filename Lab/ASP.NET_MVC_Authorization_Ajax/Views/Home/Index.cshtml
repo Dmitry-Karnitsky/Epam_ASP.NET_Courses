@@ -1,0 +1,35 @@
+﻿@using Task_2.Infostructure;
+@{
+    ViewBag.Title = "Json";
+}
+
+<h2>Json Content</h2>
+
+<div id="loading" class="load" style="display:none">
+    <p>Loading Data...</p>
+</div>
+
+@Html.Action("GetDataUsingView", new { info = ViewBag.PagingInfo })
+
+@{
+    PagingInfo pi = new PagingInfo(ViewBag.PagingInfo);
+    Dictionary<string, object> attr = new Dictionary<string, object>();
+}
+
+<div class="content-comments">
+    @using (Ajax.BeginForm("AddComment", new AjaxOptions()
+{
+    Url = Url.Action("AddComment"),
+    OnSuccess = "addComment",
+    HttpMethod = "POST"
+}))
+    {
+        attr.Add("class", "comment-input");
+        attr.Add("id", "comment-input");
+        @Html.TextArea("comment", attr);
+        <button id="add-comment-button" class="button" type="submit">Add comment</button>
+    }
+
+    @Html.Action("GetComments")
+
+</div>

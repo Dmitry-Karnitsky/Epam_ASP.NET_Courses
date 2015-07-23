@@ -1,0 +1,4 @@
+BookList.AddBook => BookListService.AddBook => Logger.WriteWarning AddBook: book is already exist in collection.
+BookList.AddBook => BookListService.AddBook => Logger.WriteWarning AddBook: book is already exist in collection.
+BookList.AddBook => BookListService.AddBook => Logger.WriteWarning AddBook: book is already exist in collection.
+BookList.AddBook => BookListService.AddBook => Logger.WriteWarning AddBook: book is already exist in collection.

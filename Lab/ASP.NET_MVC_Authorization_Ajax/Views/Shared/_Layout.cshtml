@@ -1,0 +1,104 @@
+﻿@model Task_2.ViewModels.LoginViewModel
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.6.2.js"></script>
+</head>
+<body>
+    <div class="page-layout">
+        <header>
+            <img class="header-image" src="~/Images/aspnet_logo_big.png" />
+            <div class="header-text">
+                <h1>EPAM SYSTEMS</h1>
+                <h3>UI LAB TRAINING</h3>
+            </div>
+            <div class="header-login-wrapper">
+                @if (HttpContext.Current.User.Identity.IsAuthenticated)
+                {
+                    <div class="authorized-user-menu-wrapper">
+                        <div class="header-username">Hello, @HttpContext.Current.User.Identity.Name</div>
+                        @Html.ActionLink("Manage", "Manage", "Account")
+                        @Html.ActionLink("LogOut", "LogOut", "Account")
+                    </div>
+                }
+                else
+                {
+                    <div class="unauthorized-user-menu-wrapper">
+                        <a class="unauthenticated-login-button" href="/Account/LogIn?returnUrl=@HttpContext.Current.Request.Url.OriginalString">Login</a>
+
+                        <div class="header-login-window invisible">
+                            <a id="close-login-window">X</a>
+                            @using (Ajax.BeginForm("LogIn", "Account", new AjaxOptions()
+                            {
+                                Url = Url.Action("Login", "Account"),
+                                HttpMethod = "POST",
+                                OnSuccess = "redirectToPage"
+                            }))
+                            {
+                                @Html.LabelFor(model => model.Username, new { @class = "username-label" });
+                                @Html.EditorFor(model => model.Username, new { @class = "username-input" });
+
+                                @Html.LabelFor(model => model.Password, new { @class = "password-label" });
+                                @Html.EditorFor(model => model.Password, new { @class = "password-input" });
+
+
+                                @Html.LabelFor(model => model.RememberMe, new { @class = "rememberme-label" });
+                                @Html.EditorFor(model => model.RememberMe, new { @class = "rememberme-input" });
+
+                                <input type="submit" value="Login" id="login-button" />
+                                <span style="display: inline;"> or </span>
+                                @Html.ActionLink("Register", "Register", "Account", null, new { style = "margin-top: 0.3em;" });
+                            }
+                        </div>
+                    </div>
+                }
+            </div>
+
+            <nav class="header-navigation">
+                <ul class="header-navigation-list">
+                    <li>
+                        <a title="Home" href="#">HOME</a>
+                    </li>
+                    <li>
+                        <a title="Tasks" href="#">TASKS</a>
+                    </li>
+                    <li>
+                        <a title="About" href="#">ABOUT</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="left-side-panel">
+            <nav class="side-navigation">
+                <ul class="side-navigation-list">
+                    <li>
+                        <a title="Home" href="#">HOME</a>
+                    </li>
+                    <li>
+                        <a title="Tasks" href="#">TASKS</a>
+                    </li>
+                    <li>
+                        <a title="About" href="#">ABOUT</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+
+        <div class="content">
+            @RenderBody()
+        </div>
+    </div>
+    @*<footer>
+            <p>&copy; - @DateTime.Now.Year</p>
+        </footer>*@
+
+    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+    <script src="~/Scripts/mylib.js"></script>
+</body>
+</html>

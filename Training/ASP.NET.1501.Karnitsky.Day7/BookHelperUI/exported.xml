@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<books>
+  <book>
+    <title>.Net Performance</title>
+    <author>Sasha Goldstein</author>
+    <publisher>APress</publisher>
+    <year>2012</year>
+    <edition>1</edition>
+    <pages>361</pages>
+  </book>
+  <book>
+    <title>C# in a Nutshell</title>
+    <author>Joseph Albahari</author>
+    <publisher>O'Reilly</publisher>
+    <year>2012</year>
+    <edition>5</edition>
+    <pages>1062</pages>
+  </book>
+  <book>
+    <title>CLR via C#</title>
+    <author>Jeffrey Richter</author>
+    <publisher>Microsoft Press</publisher>
+    <year>2013</year>
+    <edition>4</edition>
+    <pages>860</pages>
+  </book>
+  <book>
+    <title>C# 4.0 Unleashed</title>
+    <author>Bart de Smet</author>
+    <publisher>SAMS</publisher>
+    <year>2011</year>
+    <edition>1</edition>
+    <pages>1635</pages>
+  </book>
+</books>

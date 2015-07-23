@@ -1,0 +1,19 @@
+﻿@using Task_2.Infostructure;
+
+@{
+    List<CommentInfo> comments = ViewBag.Comments;
+}
+
+<div id="ajax-comments" class="comments-wrapper">
+    <ul class="comments-list">
+
+        @foreach (var comment in comments)
+        {
+            <li class="comment">
+                <div class="comment-user">@comment.Username</div>
+                <div class="comment-time">@comment.Time</div>
+                <div class="comment-text">@comment.Comment</div>
+            </li>
+        }
+    </ul>
+</div>

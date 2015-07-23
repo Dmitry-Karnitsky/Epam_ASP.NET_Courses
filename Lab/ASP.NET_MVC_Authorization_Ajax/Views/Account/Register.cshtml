@@ -1,0 +1,46 @@
+﻿@model Task_2.ViewModels.RegisterViewModel
+
+@{
+    ViewBag.Title = "Register";
+    Layout = "~/Views/Shared/_AccountLayout.cshtml";
+}
+
+<div class="register-page-menu">
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <h4>User Register</h4>
+            <hr />
+            @Html.ValidationSummary(true)
+
+            @Html.LabelFor(model => model.Username, new { @class = "username-label" })
+            @Html.EditorFor(model => model.Username, new { @class = "username-input" })
+            @Html.ValidationMessageFor(model => model.Username)
+
+            @Html.LabelFor(model => model.Password, new { @class = "password-label" })
+            @Html.EditorFor(model => model.Password, new { @class = "password-input" })
+            @Html.ValidationMessageFor(model => model.Password)
+
+            @Html.LabelFor(model => model.RepeatPassword, new { @class = "password-label" })
+            @Html.EditorFor(model => model.RepeatPassword, new { @class = "password-label" })
+            @Html.ValidationMessageFor(model => model.RepeatPassword)
+
+            @Html.LabelFor(model => model.Email, new { @class = "username-label" })
+            @Html.EditorFor(model => model.Email, new { @class = "username-label" })
+            @Html.ValidationMessageFor(model => model.Email)
+
+            @Html.LabelFor(model => model.FirstName, new { @class = "username-label" })
+            @Html.EditorFor(model => model.FirstName, new { @class = "username-input" })
+            @Html.ValidationMessageFor(model => model.FirstName)
+
+            @Html.LabelFor(model => model.LastName, new { @class = "username-label" })
+            @Html.EditorFor(model => model.LastName, new { @class = "username-input" })
+            @Html.ValidationMessageFor(model => model.LastName)
+
+            <input type="submit" value="Register" id="register-button" />
+            </div>
+    }
+</div>
+
